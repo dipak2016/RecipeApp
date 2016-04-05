@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  RecepieViewController.h
 //  RecipeApp
 //
 //  Created by Tops on 3/21/16.
@@ -7,13 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SubCateViewController.h"
-@interface ViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@interface RecepieViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 {
-    NSArray *arr_category;
+    NSArray *arr_recepie;
 }
+@property(retain,nonatomic)NSString *cat_id;
 @property (weak, nonatomic) IBOutlet UITableView *tbl_vw;
 
-
 @end
-

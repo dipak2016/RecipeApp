@@ -14,6 +14,8 @@
 		E7FAB6EA1CA00CEA000B0340 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7FAB6E91CA00CEA000B0340 /* Images.xcassets */; };
 		E7FAB6ED1CA00CEA000B0340 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7FAB6EB1CA00CEA000B0340 /* LaunchScreen.xib */; };
 		E7FAB6F91CA00CEA000B0340 /* RecipeAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FAB6F81CA00CEA000B0340 /* RecipeAppTests.m */; };
+		E7FAB7041CA0107B000B0340 /* SubCateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FAB7031CA0107B000B0340 /* SubCateViewController.m */; };
+		E7FAB7071CA01666000B0340 /* RecepieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7FAB7061CA01666000B0340 /* RecepieViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,10 @@
 		E7FAB6F21CA00CEA000B0340 /* RecipeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7FAB6F71CA00CEA000B0340 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7FAB6F81CA00CEA000B0340 /* RecipeAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeAppTests.m; sourceTree = "<group>"; };
+		E7FAB7021CA0107B000B0340 /* SubCateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCateViewController.h; sourceTree = "<group>"; };
+		E7FAB7031CA0107B000B0340 /* SubCateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCateViewController.m; sourceTree = "<group>"; };
+		E7FAB7051CA01666000B0340 /* RecepieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecepieViewController.h; sourceTree = "<group>"; };
+		E7FAB7061CA01666000B0340 /* RecepieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecepieViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,10 @@
 		E7FAB6D01CA00CEA000B0340 = {
 			isa = PBXGroup;
 			children = (
+				E7FAB7051CA01666000B0340 /* RecepieViewController.h */,
+				E7FAB7061CA01666000B0340 /* RecepieViewController.m */,
+				E7FAB7021CA0107B000B0340 /* SubCateViewController.h */,
+				E7FAB7031CA0107B000B0340 /* SubCateViewController.m */,
 				E7FAB6DB1CA00CEA000B0340 /* RecipeApp */,
 				E7FAB6F51CA00CEA000B0340 /* RecipeAppTests */,
 				E7FAB6DA1CA00CEA000B0340 /* Products */,
@@ -163,7 +173,7 @@
 		E7FAB6D11CA00CEA000B0340 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = Tops;
 				TargetAttributes = {
 					E7FAB6D81CA00CEA000B0340 = {
@@ -219,8 +229,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7FAB7041CA0107B000B0340 /* SubCateViewController.m in Sources */,
 				E7FAB6E51CA00CEA000B0340 /* ViewController.m in Sources */,
 				E7FAB6E21CA00CEA000B0340 /* AppDelegate.m in Sources */,
+				E7FAB7071CA01666000B0340 /* RecepieViewController.m in Sources */,
 				E7FAB6DF1CA00CEA000B0340 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +295,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -344,7 +357,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -354,7 +369,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RecipeApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -373,6 +390,7 @@
 				);
 				INFOPLIST_FILE = RecipeAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeApp.app/RecipeApp";
 			};
@@ -388,6 +406,7 @@
 				);
 				INFOPLIST_FILE = RecipeAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RecipeApp.app/RecipeApp";
 			};
@@ -412,6 +431,7 @@
 				E7FAB6FE1CA00CEA000B0340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E7FAB6FF1CA00CEA000B0340 /* Build configuration list for PBXNativeTarget "RecipeAppTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +440,7 @@
 				E7FAB7011CA00CEA000B0340 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
